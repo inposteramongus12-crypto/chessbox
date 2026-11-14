@@ -704,7 +704,7 @@ const HickCard: React.FC = () => {
 };
 
 /* 037–038: evening, the first voice messages (text in clouds, not voiced) */
-export const Evening: React.FC<{day: number; a: string; b?: string; toLev: string[]; toZak?: string[]; levItem?: 'ice' | 'mat' | 'note'; zakItem?: 'queen' | 'box' | 'none'; onlyLev?: boolean; onlyZak?: boolean; delZ?: number; lateZ?: string}> = ({day, a, b, toLev, toZak, levItem, zakItem, onlyLev, onlyZak, delZ, lateZ}) => {
+export const Evening: React.FC<{day: number; a: string; b?: string; toLev: string[]; toZak?: string[]; levItem?: 'ice' | 'mat' | 'note'; zakItem?: 'queen' | 'box' | 'none'; onlyLev?: boolean; onlyZak?: boolean; delZ?: number; lateZ?: string; zakFrom?: boolean}> = ({day, a, b, toLev, toZak, levItem, zakItem, onlyLev, onlyZak, delZ, lateZ, zakFrom}) => {
 	const {gf, t, id} = useT();
 	const second = !!b && id >= b;
 	const cam = usePushK(second ? camOn(960, 570, 1.05) : camOn(960, 540, 1.0), second ? camOn(960, 600, 1.1) : camOn(960, 560, 1.06));
@@ -718,19 +718,19 @@ export const Evening: React.FC<{day: number; a: string; b?: string; toLev: strin
 			<Layer depth={1}>
 				<Svg>
 					<rect x={-400} y={-200} width={2720} height={1500} fill="#0f1330" />
-					{!onlyZak ? <rect x={110} y={400} width={800} height={640} rx={40} fill="#27406e" stroke="#59607e" strokeWidth={6} /> : null}
-					{!onlyLev ? <rect x={1010} y={400} width={800} height={640} rx={40} fill="#6e2f27" stroke="#59607e" strokeWidth={6} /> : null}
+					{!onlyZak ? <rect x={onlyLev ? 560 : 110} y={400} width={800} height={640} rx={40} fill="#27406e" stroke="#59607e" strokeWidth={6} /> : null}
+					{!onlyLev ? <rect x={onlyZak ? 560 : 1010} y={400} width={800} height={640} rx={40} fill="#6e2f27" stroke="#59607e" strokeWidth={6} /> : null}
 					{!onlyZak ? (
 						<>
-							<Actor who="lev"  x={onlyLev ? 960 : 510} floor={1010} s={1.25} facing={1} outfit="tee" pose={lp} look={[0.4, -0.3]} handItem={ice ? undefined : <Phone />} uid={'levE' + day} shadow={false} expr={ice ? 'sad' : 'normal'} armOver={ice} />
+							<Actor who="lev"  x={onlyLev ? 960 : 510} floor={1010} s={1.25} facing={1} outfit="tee" pose={lp} look={[0.4, -0.3]} handItem={ice ? undefined : levItem === 'note' ? <Notebook /> : <Phone />} uid={'levE' + day} shadow={false} expr={ice ? 'sad' : 'normal'} armOver={ice} />
 							{ice ? <rect x={(onlyLev ? 960 : 510) + 6} y={520} width={76} height={46} rx={12} fill="#8fd3ff" stroke="#0b0d1e" strokeWidth={4} /> : null}
-							<Cloud x={onlyLev ? 960 : 510} y={236} t={tA} lines={toLev} label="ЗАХАР → ЛЬВУ" size={58} fill="#ffe3ef" stroke="#8a2a1c" ink="#3a120c" tail={[0, 170]} />
+							<Cloud x={onlyLev ? 1000 : 640} y={236} t={tA} lines={toLev} label="ЗАХАР → ЛЬВУ" size={58} fill="#ffe3ef" stroke="#8a2a1c" ink="#3a120c" tail={[onlyLev ? -40 : -130, 170]} />
 						</>
 					) : null}
 					{!onlyLev ? (
 						<>
 							<Actor who="zakhar"  x={onlyZak ? 960 : 1410} floor={1010} s={1.25} facing={-1} outfit="suit" pose={zp} look={[0.4, -0.3]} handItem={zakItem === 'queen' && second ? undefined : <Phone />} uid={'zakE' + day} shadow={false} />
-							{toZak ? <Cloud x={onlyZak ? 960 : 1410} y={250} t={delZ !== undefined ? tA : tB} hold={delZ} lines={toZak} label="ЛЕВ → ЗАХАРУ" size={58} fill={CREAM} stroke="#1f3f86" ink="#0f1f48" tail={[0, 170]} /> : null}
+							{toZak ? <Cloud x={onlyZak ? 960 : 1410} y={250} t={delZ !== undefined ? tA : tB} hold={delZ} lines={toZak} label={zakFrom ? 'ЗАХАР → ЛЬВУ' : 'ЛЕВ → ЗАХАРУ'} size={58} fill={CREAM} stroke="#1f3f86" ink="#0f1f48" tail={[0, 170]} /> : null}
 							{zakItem === 'queen' && second ? (
 								<g transform={`translate(${(onlyZak ? 960 : 1410) - 64},${1010 - 157 * 1.25 - 150}) scale(1.3)`}>
 									<path d="M-22,28 L-30,-24 L-14,-6 L-8,-34 L0,-8 L8,-34 L14,-6 L30,-24 L22,28 Z" fill="#fffaf0" stroke="#1b1e2a" strokeWidth={5} strokeLinejoin="round" />
