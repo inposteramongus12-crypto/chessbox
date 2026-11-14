@@ -57,7 +57,7 @@ export const useLineCam = (table: Record<string, CamPair>, cycle: CamPair[]) => 
 };
 
 /* ---------------------------------------------------------------- text */
-export const tw = (s: string, size: number) => s.length * size * 0.66; // generous width of bold Rubik caps
+export const tw = (s: string, size: number) => s.length * size * 0.7; // generous width of bold Rubik caps
 
 /* dark plate with one or several lines (world or HUD space). (x, y) = centre. */
 export const Plate: React.FC<{x: number; y: number; lines: string[]; size?: number; c?: string; k?: number; fill?: string; ink?: string; pad?: number; safe?: boolean; sub?: string}> = ({

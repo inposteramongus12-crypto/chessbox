@@ -228,7 +228,7 @@ const ClubScene: React.FC = () => {
 							<rect x={-70} y={-70} width={140} height={140} rx={14} fill="none" stroke={GOLD} strokeWidth={12} />
 						</g>
 					) : null}
-					{id === '069' ? <Plate x={980} y={330} lines={["1–0"]} sub="ПЕРВАЯ ПОБЕДА" size={90} k={k01(t('069'), 16, 12)} /> : null}
+					{id === '069' ? <Plate x={960} y={985} lines={["1–0"]} sub="ПЕРВАЯ ПОБЕДА" size={80} k={k01(t('069'), 16, 12)} /> : null}
 					{id === '084' ? (
 						<>
 							<Plate x={640} y={380} lines={['25 ДНЕЙ']} size={66} c="#ff7a5c" k={k01(t('084'), Math.round(d('084') * 0.55), 10)} />
