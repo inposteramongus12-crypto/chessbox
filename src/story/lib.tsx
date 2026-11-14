@@ -157,7 +157,7 @@ export const DayPlate: React.FC<{day: number; since?: number; label?: string}> =
 	const txt = String(day);
 	const w = 70 + tw(label, 56) + 26 + txt.length * 56;
 	return (
-		<g transform={`translate(${104 + w / 2},${142}) scale(${pop})`}>
+		<g transform={`translate(104,142) scale(${pop}) translate(${w / 2},0)`}>
 			<rect x={-w / 2} y={-54} width={w} height={108} rx={54} fill={NAVY} stroke={GOLD} strokeWidth={6} />
 			<text x={-w / 2 + 36} y={19} fontSize={56} fontFamily={FONT} fontWeight={800} fill="#ffe9ad" letterSpacing={2}>
 				{label}
@@ -175,7 +175,7 @@ export const RoundPlate: React.FC<{n: number; kind: 'ШАХМАТЫ' | 'БОКС
 	const w = 72 + tw(a, 54) + 30 + tw(kind, 48);
 	const c = kind === 'БОКС' ? '#ff7a5c' : kind === 'ПЕРЕРЫВ' ? '#9fb0d8' : GOLD;
 	return (
-		<g transform={`translate(${104 + w / 2},${142}) scale(${pop})`}>
+		<g transform={`translate(104,142) scale(${pop}) translate(${w / 2},0)`}>
 			<rect x={-w / 2} y={-54} width={w} height={108} rx={54} fill={NAVY} stroke={c} strokeWidth={6} />
 			<text x={-w / 2 + 36} y={20} fontSize={54} fontFamily={FONT} fontWeight={900} fill="#fff">
 				{a}

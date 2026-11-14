@@ -113,14 +113,14 @@ export const ArenaScene: React.FC = () => {
 		'134': C(900, 650, 1.18, 890, 630, 1.26),
 		'146': C(900, 610, 1.14, 890, 605, 1.22),
 		'147': C(960, 600, 1.04, 960, 600, 1.1),
-		'157': C(960, 620, 1.3, 960, 610, 1.46),
+		'157': C(960, 620, 1.16, 960, 610, 1.26),
 		'165': C(560, 620, 1.3, 540, 615, 1.44),
 		'177': C(960, 520, 1.0, 960, 480, 1.08),
 		'187': C(960, 600, 1.16, 960, 590, 1.28),
 		'188': C(960, 600, 1.2, 960, 590, 1.0),
 	};
 	const preSp: Record<string, CamPair> = {LEV: C(470, 620, 1.5, 465, 615, 1.58), ZAKHAR: C(1370, 620, 1.5, 1375, 615, 1.58)};
-	if (sp !== 'N' && !table[id]) table[id] = pre ? preSp[sp] : bySp[sp];
+	if (sp !== 'N' && !table[id]) table[id] = brk ? C(430, 620, 1.36, 425, 615, 1.46) : pre ? preSp[sp] : bySp[sp];
 	const cam = useLineCam(table, cyc);
 
 	let lx = 800;
@@ -319,8 +319,8 @@ export const ArenaScene: React.FC = () => {
 				zp = n === 163 ? reach(reach(idle(gf, 2), 'F', [60, -150 + Math.sin(gf / 2) * 14], 1), 'B', [50, -70], 1) : {...idle(gf, 2), armF: [60, 60], armB: [-50, 50], lean: -6};
 				lblink = k > 0.9 ? 1 : undefined;
 				zex = 'worried';
-				rx = 1320;
-				if (n === 158) fx = <Cloud x={960} y={250} t={T - 10} lines={['БОКС ДАВАЙ!']} size={62} />;
+				rx = 1420;
+				if (n === 158) fx = <Cloud x={1240} y={270} t={T - 10} lines={['БОКС ДАВАЙ!']} size={62} />;
 			}
 		}
 	}
@@ -330,7 +330,7 @@ export const ArenaScene: React.FC = () => {
 		lp = {...sit(gf, 1), armF: [20, 50], armB: [14, 50]};
 		lseat = 737;
 		lblink = 1;
-		zx = 1500;
+		zx = 1400;
 		zp = sit(gf, 2);
 		zseat = 737;
 		px = 250;
@@ -369,7 +369,7 @@ export const ArenaScene: React.FC = () => {
 			lp = reach(reach(idle(gf, 1), 'B', [-40, -230], 1), 'F', [110, -220], k01(T, D * 0.55, 12));
 			zp = reach(idle(gf, 2), 'F', [-30, -230], k01(T, D * 0.55, 12));
 			crowdUp = 1;
-			fx = <Plate x={960} y={250} lines={['МАТ. РАУНД 11']} sub="ПОБЕДИЛ ЛЕВ АРСКИЙ" size={70} k={k01(T, 8, 12)} />;
+			fx = <Plate x={1180} y={270} lines={['МАТ. РАУНД 11']} sub="ПОБЕДИЛ ЛЕВ АРСКИЙ" size={70} k={k01(T, 8, 12)} />;
 		}
 		if (n === 186) crowdUp = 0.6;
 	}
@@ -493,7 +493,7 @@ export const FinalBoard: React.FC = () => {
 		const word = n === 169 ? 'РАЗ' : n === 170 || n === 171 || n === 172 || n === 174 ? 'ДВА' : 'ТРИ';
 		note = <Plate x={1500} y={620} lines={[n === 176 ? 'МАТ' : word]} size={n === 176 ? 130 : 110} c={n === 176 ? '#ff5a4a' : GOLD} k={1} />;
 	}
-	const head = n === 161 || n === 162;
+	const head = n === 159 || n === 161 || n === 162;
 	const cam = usePushK(camOn(960, 560, 1.0), n === 123 || head || n >= 174 ? camOn(1000, 520, 1.1) : camOn(980, 550, 1.06));
 	// flashbacks over the board in the head (161: the gap after the line)
 	const fb = n === 161 ? T - D : -1;
