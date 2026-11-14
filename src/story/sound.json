@@ -1,0 +1,1350 @@
+{
+ "_comment": "Музыки нет. Эмбиент на каждую локацию, эффекты на действия; вжухи берутся из auto-cues.json. Файл собран скриптом по timeline.json: при пересборке таймлайна пересоздать.",
+ "ambience": [
+  {
+   "from": "001",
+   "to": "001",
+   "kind": "hall",
+   "gain": 0.05
+  },
+  {
+   "from": "002",
+   "to": "002",
+   "kind": "crowd",
+   "gain": 0.06
+  },
+  {
+   "from": "003",
+   "to": "015",
+   "kind": "room",
+   "gain": 0.04
+  },
+  {
+   "from": "016",
+   "to": "026",
+   "kind": "room",
+   "gain": 0.05
+  },
+  {
+   "from": "027",
+   "to": "036",
+   "kind": "hall",
+   "gain": 0.035
+  },
+  {
+   "from": "037",
+   "to": "038",
+   "kind": "night",
+   "gain": 0.05
+  },
+  {
+   "from": "039",
+   "to": "050",
+   "kind": "room",
+   "gain": 0.05
+  },
+  {
+   "from": "051",
+   "to": "057",
+   "kind": "hall",
+   "gain": 0.035
+  },
+  {
+   "from": "058",
+   "to": "060",
+   "kind": "night",
+   "gain": 0.05
+  },
+  {
+   "from": "061",
+   "to": "069",
+   "kind": "room",
+   "gain": 0.05
+  },
+  {
+   "from": "070",
+   "to": "078",
+   "kind": "hall",
+   "gain": 0.035
+  },
+  {
+   "from": "079",
+   "to": "082",
+   "kind": "night",
+   "gain": 0.05
+  },
+  {
+   "from": "083",
+   "to": "091",
+   "kind": "room",
+   "gain": 0.05
+  },
+  {
+   "from": "092",
+   "to": "092",
+   "kind": "night",
+   "gain": 0.05
+  },
+  {
+   "from": "093",
+   "to": "098",
+   "kind": "hall",
+   "gain": 0.035
+  },
+  {
+   "from": "099",
+   "to": "107",
+   "kind": "street",
+   "gain": 0.06
+  },
+  {
+   "from": "108",
+   "to": "122",
+   "kind": "crowd",
+   "gain": 0.035
+  },
+  {
+   "from": "123",
+   "to": "125",
+   "kind": "crowd",
+   "gain": 0.025
+  },
+  {
+   "from": "126",
+   "to": "129",
+   "kind": "crowd",
+   "gain": 0.055
+  },
+  {
+   "from": "130",
+   "to": "131",
+   "kind": "crowd",
+   "gain": 0.025
+  },
+  {
+   "from": "132",
+   "to": "135",
+   "kind": "crowd",
+   "gain": 0.055
+  },
+  {
+   "from": "136",
+   "to": "140",
+   "kind": "crowd",
+   "gain": 0.025
+  },
+  {
+   "from": "141",
+   "to": "143",
+   "kind": "crowd",
+   "gain": 0.055
+  },
+  {
+   "from": "144",
+   "to": "144",
+   "kind": "crowd",
+   "gain": 0.025
+  },
+  {
+   "from": "145",
+   "to": "146",
+   "kind": "crowd",
+   "gain": 0.055
+  },
+  {
+   "from": "147",
+   "to": "155",
+   "kind": "crowd",
+   "gain": 0.025
+  },
+  {
+   "from": "156",
+   "to": "164",
+   "kind": "crowd",
+   "gain": 0.055
+  },
+  {
+   "from": "165",
+   "to": "167",
+   "kind": "crowd",
+   "gain": 0.035
+  },
+  {
+   "from": "168",
+   "to": "176",
+   "kind": "crowd",
+   "gain": 0.02
+  },
+  {
+   "from": "177",
+   "to": "177",
+   "kind": "crowd",
+   "gain": 0.09
+  },
+  {
+   "from": "178",
+   "to": "183",
+   "kind": "crowd",
+   "gain": 0.03
+  },
+  {
+   "from": "184",
+   "to": "188",
+   "kind": "crowd",
+   "gain": 0.05
+  },
+  {
+   "from": "189",
+   "to": "190",
+   "kind": "room",
+   "gain": 0.04
+  }
+ ],
+ "sfx": [
+  {
+   "at": "001",
+   "off": 0,
+   "type": "steps",
+   "amp": 0.1,
+   "dur": 5.133333333333334
+  },
+  {
+   "at": "002",
+   "off": 46,
+   "type": "thud",
+   "amp": 0.5
+  },
+  {
+   "at": "002",
+   "off": 54,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "002",
+   "off": 79,
+   "type": "ding",
+   "amp": 0.1
+  },
+  {
+   "at": "003",
+   "off": 0,
+   "type": "whoosh",
+   "amp": 0.14
+  },
+  {
+   "at": "003",
+   "off": 10,
+   "type": "pop",
+   "amp": 0.12
+  },
+  {
+   "at": "004",
+   "off": 82,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "004",
+   "off": 112,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "004",
+   "off": 136,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "004",
+   "off": 142,
+   "type": "stamp",
+   "amp": 0.4
+  },
+  {
+   "at": "006",
+   "off": 50,
+   "type": "click",
+   "amp": 0.3
+  },
+  {
+   "at": "007",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "010",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "011",
+   "off": 0,
+   "type": "ring",
+   "amp": 0.05,
+   "dur": 0.9
+  },
+  {
+   "at": "011",
+   "off": 34,
+   "type": "pop",
+   "amp": 0.12
+  },
+  {
+   "at": "012",
+   "off": 2,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "012",
+   "off": 26,
+   "type": "swoosh",
+   "amp": 0.1
+  },
+  {
+   "at": "014",
+   "off": 0,
+   "type": "sent",
+   "amp": 0.1
+  },
+  {
+   "at": "015",
+   "off": 0,
+   "type": "sent",
+   "amp": 0.1
+  },
+  {
+   "at": "016",
+   "off": 0,
+   "type": "steps",
+   "amp": 0.1,
+   "dur": 1.6
+  },
+  {
+   "at": "018",
+   "off": 53,
+   "type": "thud",
+   "amp": 0.4
+  },
+  {
+   "at": "018",
+   "off": 99,
+   "type": "thud",
+   "amp": 0.4
+  },
+  {
+   "at": "018",
+   "off": 6,
+   "type": "click",
+   "amp": 0.18
+  },
+  {
+   "at": "018",
+   "off": 18,
+   "type": "click",
+   "amp": 0.18
+  },
+  {
+   "at": "018",
+   "off": 70,
+   "type": "click",
+   "amp": 0.18
+  },
+  {
+   "at": "018",
+   "off": 115,
+   "type": "click",
+   "amp": 0.18
+  },
+  {
+   "at": "020",
+   "off": 21,
+   "type": "thud",
+   "amp": 0.4
+  },
+  {
+   "at": "020",
+   "off": 80,
+   "type": "pop",
+   "amp": 0.14
+  },
+  {
+   "at": "021",
+   "off": 6,
+   "type": "thud",
+   "amp": 0.35
+  },
+  {
+   "at": "023",
+   "off": 44,
+   "type": "clap",
+   "amp": 0.25
+  },
+  {
+   "at": "025",
+   "off": 8,
+   "type": "ding",
+   "amp": 0.1
+  },
+  {
+   "at": "026",
+   "off": 0,
+   "type": "thud",
+   "amp": 0.2
+  },
+  {
+   "at": "029",
+   "off": 14,
+   "type": "thud",
+   "amp": 0.45
+  },
+  {
+   "at": "029",
+   "off": 81,
+   "type": "click",
+   "amp": 0.32
+  },
+  {
+   "at": "033",
+   "off": 46,
+   "type": "thud",
+   "amp": 0.45
+  },
+  {
+   "at": "034",
+   "off": 8,
+   "type": "pop",
+   "amp": 0.08
+  },
+  {
+   "at": "035",
+   "off": 101,
+   "type": "whoosh",
+   "amp": 0.14
+  },
+  {
+   "at": "036",
+   "off": 106,
+   "type": "swoosh",
+   "amp": 0.1
+  },
+  {
+   "at": "036",
+   "off": 121,
+   "type": "swoosh",
+   "amp": 0.1
+  },
+  {
+   "at": "037",
+   "off": 16,
+   "type": "chat",
+   "amp": 0.1
+  },
+  {
+   "at": "037",
+   "off": 44,
+   "type": "chat",
+   "amp": 0.1
+  },
+  {
+   "at": "041",
+   "off": 6,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "041",
+   "off": 29,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "041",
+   "off": 52,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "041",
+   "off": 75,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "041",
+   "off": 98,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "041",
+   "off": 110,
+   "type": "ding",
+   "amp": 0.08
+  },
+  {
+   "at": "044",
+   "off": 4,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 14,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 24,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 34,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 44,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 54,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 64,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 74,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 85,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 95,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 105,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 115,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 125,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 135,
+   "type": "click",
+   "amp": 0.14
+  },
+  {
+   "at": "044",
+   "off": 133,
+   "type": "ding",
+   "amp": 0.1
+  },
+  {
+   "at": "045",
+   "off": 86,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "045",
+   "off": 94,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "045",
+   "off": 102,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "045",
+   "off": 112,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "045",
+   "off": 126,
+   "type": "ding",
+   "amp": 0.06
+  },
+  {
+   "at": "046",
+   "off": 36,
+   "type": "swoosh",
+   "amp": 0.1
+  },
+  {
+   "at": "048",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "049",
+   "off": 6,
+   "type": "swoosh",
+   "amp": 0.1
+  },
+  {
+   "at": "050",
+   "off": 6,
+   "type": "ding",
+   "amp": 0.07
+  },
+  {
+   "at": "051",
+   "off": 28,
+   "type": "thud",
+   "amp": 0.4
+  },
+  {
+   "at": "054",
+   "off": 8,
+   "type": "thud",
+   "amp": 0.35
+  },
+  {
+   "at": "056",
+   "off": 8,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "056",
+   "off": 44,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "056",
+   "off": 80,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "057",
+   "off": 83,
+   "type": "click",
+   "amp": 0.32
+  },
+  {
+   "at": "058",
+   "off": 16,
+   "type": "chat",
+   "amp": 0.1
+  },
+  {
+   "at": "058",
+   "off": 44,
+   "type": "chat",
+   "amp": 0.1
+  },
+  {
+   "at": "061",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.06
+  },
+  {
+   "at": "063",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "067",
+   "off": 24,
+   "type": "swoosh",
+   "amp": 0.1
+  },
+  {
+   "at": "068",
+   "off": 22,
+   "type": "stamp",
+   "amp": 0.3
+  },
+  {
+   "at": "069",
+   "off": 16,
+   "type": "ding",
+   "amp": 0.1
+  },
+  {
+   "at": "070",
+   "off": 10,
+   "type": "pop",
+   "amp": 0.08
+  },
+  {
+   "at": "070",
+   "off": 32,
+   "type": "pop",
+   "amp": 0.08
+  },
+  {
+   "at": "070",
+   "off": 54,
+   "type": "pop",
+   "amp": 0.08
+  },
+  {
+   "at": "071",
+   "off": 6,
+   "type": "pop",
+   "amp": 0.08
+  },
+  {
+   "at": "071",
+   "off": 28,
+   "type": "pop",
+   "amp": 0.08
+  },
+  {
+   "at": "071",
+   "off": 50,
+   "type": "pop",
+   "amp": 0.08
+  },
+  {
+   "at": "071",
+   "off": 84,
+   "type": "swoosh",
+   "amp": 0.1
+  },
+  {
+   "at": "074",
+   "off": 60,
+   "type": "whoosh",
+   "amp": 0.14
+  },
+  {
+   "at": "075",
+   "off": 79,
+   "type": "click",
+   "amp": 0.32
+  },
+  {
+   "at": "076",
+   "off": 80,
+   "type": "thud",
+   "amp": 0.4
+  },
+  {
+   "at": "079",
+   "off": 16,
+   "type": "chat",
+   "amp": 0.1
+  },
+  {
+   "at": "081",
+   "off": 8,
+   "type": "sent",
+   "amp": 0.1
+  },
+  {
+   "at": "086",
+   "off": 30,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "086",
+   "off": 70,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "087",
+   "off": 59,
+   "type": "ding",
+   "amp": 0.12
+  },
+  {
+   "at": "088",
+   "off": 0,
+   "type": "alarm",
+   "amp": 0.04,
+   "dur": 1.2
+  },
+  {
+   "at": "089",
+   "off": 4,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "092",
+   "off": 10,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "092",
+   "off": 43,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "092",
+   "off": 80,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "094",
+   "off": 19,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "094",
+   "off": 56,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "094",
+   "off": 104,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "094",
+   "off": 126,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "094",
+   "off": 149,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "096",
+   "off": 4,
+   "type": "thud",
+   "amp": 0.2
+  },
+  {
+   "at": "099",
+   "off": 0,
+   "type": "steps",
+   "amp": 0.1,
+   "dur": 6.333333333333333
+  },
+  {
+   "at": "100",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "103",
+   "off": 10,
+   "type": "clap",
+   "amp": 0.12
+  },
+  {
+   "at": "107",
+   "off": 6,
+   "type": "switch",
+   "amp": 0.25
+  },
+  {
+   "at": "107",
+   "off": 30,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "108",
+   "off": 0,
+   "type": "steps",
+   "amp": 0.1,
+   "dur": 2
+  },
+  {
+   "at": "108",
+   "off": 242,
+   "type": "pop",
+   "amp": 0.14
+  },
+  {
+   "at": "111",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "112",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "115",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "116",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "117",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "118",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "119",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "122",
+   "off": 16,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "123",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "126",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "130",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "132",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "136",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "141",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "144",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "145",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "147",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "156",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "165",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "168",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.13
+  },
+  {
+   "at": "129",
+   "off": 16,
+   "type": "thud",
+   "amp": 0.3
+  },
+  {
+   "at": "129",
+   "off": 81,
+   "type": "click",
+   "amp": 0.32
+  },
+  {
+   "at": "132",
+   "off": 66,
+   "type": "thud",
+   "amp": 0.5
+  },
+  {
+   "at": "132",
+   "off": 174,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "132",
+   "off": 192,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "132",
+   "off": 210,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "134",
+   "off": 76,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "136",
+   "off": 0,
+   "type": "heartbeat",
+   "amp": 0.08,
+   "dur": 8.833333333333334
+  },
+  {
+   "at": "139",
+   "off": 20,
+   "type": "click",
+   "amp": 0.25
+  },
+  {
+   "at": "142",
+   "off": 10,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "142",
+   "off": 30,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "142",
+   "off": 50,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "142",
+   "off": 70,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "142",
+   "off": 90,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "145",
+   "off": 30,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "145",
+   "off": 50,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "145",
+   "off": 70,
+   "type": "thud",
+   "amp": 0.18
+  },
+  {
+   "at": "147",
+   "off": 94,
+   "type": "stamp",
+   "amp": 0.3
+  },
+  {
+   "at": "148",
+   "off": 166,
+   "type": "whooshUp",
+   "amp": 0.2,
+   "dur": 0.6
+  },
+  {
+   "at": "148",
+   "off": 176,
+   "type": "ding",
+   "amp": 0.1
+  },
+  {
+   "at": "150",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "152",
+   "off": 24,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "152",
+   "off": 42,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "152",
+   "off": 61,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "157",
+   "off": 64,
+   "type": "thud",
+   "amp": 0.2
+  },
+  {
+   "at": "158",
+   "off": 6,
+   "type": "clap",
+   "amp": 0.15
+  },
+  {
+   "at": "160",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "161",
+   "off": 163,
+   "type": "whooshUp",
+   "amp": 0.18,
+   "dur": 0.5
+  },
+  {
+   "at": "161",
+   "off": 215,
+   "type": "whooshUp",
+   "amp": 0.18,
+   "dur": 0.5
+  },
+  {
+   "at": "162",
+   "off": 10,
+   "type": "ding",
+   "amp": 0.08
+  },
+  {
+   "at": "168",
+   "off": 0,
+   "type": "heartbeat",
+   "amp": 0.09,
+   "dur": 7.533333333333333
+  },
+  {
+   "at": "169",
+   "off": 12,
+   "type": "click",
+   "amp": 0.3
+  },
+  {
+   "at": "169",
+   "off": 36,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "170",
+   "off": 12,
+   "type": "thud",
+   "amp": 0.35
+  },
+  {
+   "at": "172",
+   "off": 14,
+   "type": "click",
+   "amp": 0.3
+  },
+  {
+   "at": "174",
+   "off": 4,
+   "type": "switch",
+   "amp": 0.2
+  },
+  {
+   "at": "175",
+   "off": 12,
+   "type": "thud",
+   "amp": 0.4
+  },
+  {
+   "at": "176",
+   "off": 0,
+   "type": "stamp",
+   "amp": 0.5
+  },
+  {
+   "at": "177",
+   "off": 33,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "177",
+   "off": 41,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "177",
+   "off": 49,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "177",
+   "off": 59,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "178",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "179",
+   "off": 77,
+   "type": "stamp",
+   "amp": 0.45
+  },
+  {
+   "at": "179",
+   "off": 85,
+   "type": "ding",
+   "amp": 0.1
+  },
+  {
+   "at": "183",
+   "off": 0,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "186",
+   "off": 6,
+   "type": "clap",
+   "amp": 0.12
+  },
+  {
+   "at": "187",
+   "off": 84,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "187",
+   "off": 94,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "187",
+   "off": 104,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "189",
+   "off": 0,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "190",
+   "off": 6,
+   "type": "ding",
+   "amp": 0.12
+  }
+ ]
+}
