@@ -52,7 +52,7 @@ export const C = (x: number, y: number, z: number, x2?: number, y2?: number, z2?
 export const useLineCam = (table: Record<string, CamPair>, cycle: CamPair[]) => {
 	const {id} = useT();
 	const idx = LINES.findIndex((l) => l.id.startsWith(id));
-	const pair = table[id] ?? cycle[idx % cycle.length];
+	const pair = table[id] ?? (cycle.length ? cycle[idx % cycle.length] : [camOn(960, 560, 1.0), camOn(960, 550, 1.1)]);
 	return usePushK(pair[0], pair[1]);
 };
 
@@ -119,9 +119,9 @@ export const Cloud: React.FC<{x: number; y: number; lines: string[]; t: number; 
 	const k = spring({frame: t, fps, config: {damping: 11, stiffness: 170}});
 	const o = hold !== undefined ? interpolate(t, [hold, hold + 8], [1, 0], clamp) : 1;
 	const lh = size * 1.2;
-	const w = Math.max(...lines.map((l) => tw(l, size)), label ? tw(label, size * 0.62) : 0) + 56;
-	const h = lines.length * lh + 40 + (label ? size * 0.8 : 0);
-	const top = -h / 2 + 20 + (label ? size * 0.8 : 0);
+	const w = Math.max(...lines.map((l) => tw(l, size)), label ? tw(label, size * 0.74) : 0) + 56;
+	const h = lines.length * lh + 40 + (label ? size * 0.92 : 0);
+	const top = -h / 2 + 20 + (label ? size * 0.92 : 0);
 	return (
 		<SafeBox x={x} y={y} left={w / 2 + 8} right={w / 2 + 8} top={h / 2 + 8} bottom={h / 2 + 8}>
 			<g transform={`translate(${x},${y}) scale(${k})`} opacity={Math.min(1, k * 1.5) * o}>
@@ -129,7 +129,7 @@ export const Cloud: React.FC<{x: number; y: number; lines: string[]; t: number; 
 				<rect x={-w / 2} y={-h / 2} width={w} height={h} rx={26} fill={fill} stroke={stroke} strokeWidth={5} />
 				{tail ? <path d={`M-18,${h / 2 - 8} L${tail[0] * 0.8},${tail[1] * 0.8 + 2} L18,${h / 2 - 8} Z`} fill={fill} /> : null}
 				{label ? (
-					<text x={0} y={-h / 2 + 14 + size * 0.62} textAnchor="middle" fontSize={size * 0.62} fontFamily={FONT} fontWeight={800} fill={stroke} opacity={0.85}>
+					<text x={0} y={-h / 2 + 16 + size * 0.74} textAnchor="middle" fontSize={size * 0.74} fontFamily={FONT} fontWeight={800} fill={stroke} opacity={0.85}>
 						{label}
 					</text>
 				) : null}
@@ -155,14 +155,14 @@ export const Hud: React.FC<{children: React.ReactNode}> = ({children}) => (
 export const DayPlate: React.FC<{day: number; since?: number; label?: string}> = ({day, since = 99, label = 'ДЕНЬ'}) => {
 	const pop = 1 + 0.25 * Math.exp(-Math.max(0, since) / 5);
 	const txt = String(day);
-	const w = 60 + tw(label, 44) + 22 + txt.length * 44;
+	const w = 70 + tw(label, 56) + 26 + txt.length * 56;
 	return (
-		<g transform={`translate(${84 + w / 2},${118}) scale(${pop})`}>
-			<rect x={-w / 2} y={-44} width={w} height={88} rx={44} fill={NAVY} stroke={GOLD} strokeWidth={5} />
-			<text x={-w / 2 + 32} y={15} fontSize={44} fontFamily={FONT} fontWeight={800} fill="#ffe9ad" letterSpacing={2}>
+		<g transform={`translate(${84 + w / 2},${126}) scale(${pop})`}>
+			<rect x={-w / 2} y={-54} width={w} height={108} rx={54} fill={NAVY} stroke={GOLD} strokeWidth={6} />
+			<text x={-w / 2 + 36} y={19} fontSize={56} fontFamily={FONT} fontWeight={800} fill="#ffe9ad" letterSpacing={2}>
 				{label}
 			</text>
-			<text x={w / 2 - 30} y={21} textAnchor="end" fontSize={62} fontFamily={FONT} fontWeight={900} fill="#fff">
+			<text x={w / 2 - 34} y={27} textAnchor="end" fontSize={78} fontFamily={FONT} fontWeight={900} fill="#fff">
 				{txt}
 			</text>
 		</g>
@@ -172,15 +172,15 @@ export const DayPlate: React.FC<{day: number; since?: number; label?: string}> =
 export const RoundPlate: React.FC<{n: number; kind: 'ШАХМАТЫ' | 'БОКС' | 'ПЕРЕРЫВ'; since?: number}> = ({n, kind, since = 99}) => {
 	const pop = 1 + 0.22 * Math.exp(-Math.max(0, since) / 5);
 	const a = `РАУНД ${n}`;
-	const w = 64 + tw(a, 44) + 26 + tw(kind, 40);
+	const w = 72 + tw(a, 54) + 30 + tw(kind, 48);
 	const c = kind === 'БОКС' ? '#ff7a5c' : kind === 'ПЕРЕРЫВ' ? '#9fb0d8' : GOLD;
 	return (
-		<g transform={`translate(${84 + w / 2},${118}) scale(${pop})`}>
-			<rect x={-w / 2} y={-44} width={w} height={88} rx={44} fill={NAVY} stroke={c} strokeWidth={5} />
-			<text x={-w / 2 + 32} y={16} fontSize={44} fontFamily={FONT} fontWeight={900} fill="#fff">
+		<g transform={`translate(${84 + w / 2},${126}) scale(${pop})`}>
+			<rect x={-w / 2} y={-54} width={w} height={108} rx={54} fill={NAVY} stroke={c} strokeWidth={6} />
+			<text x={-w / 2 + 36} y={20} fontSize={54} fontFamily={FONT} fontWeight={900} fill="#fff">
 				{a}
 			</text>
-			<text x={w / 2 - 32} y={15} textAnchor="end" fontSize={40} fontFamily={FONT} fontWeight={800} fill={c}>
+			<text x={w / 2 - 36} y={18} textAnchor="end" fontSize={48} fontFamily={FONT} fontWeight={800} fill={c}>
 				{kind}
 			</text>
 		</g>
@@ -195,8 +195,9 @@ export const Clocks: React.FC<{x: number; y: number; lev: number; zak: number; r
 			<text x={0} y={24} textAnchor="middle" fontSize={76} fontFamily={FONT} fontWeight={900} fill={v <= 40 ? '#ff6a5a' : c}>
 				{mmss(v)}
 			</text>
+			<rect x={-34} y={on ? -76 : -66} width={68} height={on ? 24 : 14} rx={6} fill="#c9ced8" stroke="#0b0d1e" strokeWidth={4} />
 			{labels ? (
-				<text x={0} y={-66} textAnchor="middle" fontSize={34} fontFamily={FONT} fontWeight={800} fill="#ffe9ad">
+				<text x={0} y={96} textAnchor="middle" fontSize={38} fontFamily={FONT} fontWeight={800} fill="#ffe9ad">
 					{name}
 				</text>
 			) : null}
@@ -205,7 +206,7 @@ export const Clocks: React.FC<{x: number; y: number; lev: number; zak: number; r
 	);
 	return (
 		<g transform={`translate(${x},${y}) scale(${s})`}>
-			<rect x={-268} y={labels ? -112 : -70} width={536} height={labels ? 182 : 140} rx={24} fill={NAVY} stroke="#59607e" strokeWidth={4} />
+			<rect x={-268} y={-70} width={536} height={labels ? 186 : 140} rx={24} fill={NAVY} stroke="#59607e" strokeWidth={4} />
 			{face(-128, lev, 'ЛЕВ', run === 'lev', flagL)}
 			{face(128, zak, 'ЗАХАР', run === 'zak', flagZ)}
 		</g>

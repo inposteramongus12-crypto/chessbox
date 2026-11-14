@@ -1,8 +1,5 @@
-import React from 'react';
 import type {ShotDef} from '../kit/coverage';
-import {StubScene} from '../stub';
+import {SHOTS1} from './shots1';
 
-// ЗАГЛУШКА: список сцен ролика. Заполняется вместе со сценарием.
-// Сцена обёрнута функцией: stub.tsx тянет kit, а kit/coverage тянет этот файл (циклический импорт).
-const Stub1: React.FC = () => <StubScene />;
-export const SHOTS: ShotDef[] = [{at: '001', C: Stub1, own: true}];
+/* All shots of the long video in order. Parts: shots1 (1–3), shots2 (4–6), shots3 (7–9), shots4 (10–12). */
+export const SHOTS: ShotDef[] = [...SHOTS1];

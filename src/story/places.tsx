@@ -74,7 +74,7 @@ export const Club: React.FC<{f: number; night?: boolean; hours?: number; sign?: 
 			<line x1={255} y1={150} x2={255} y2={480} stroke="#6e4a2c" strokeWidth={10} />
 			<line x1={90} y1={315} x2={420} y2={315} stroke="#6e4a2c" strokeWidth={10} />
 			{sign ? (
-				<g transform="translate(960,214)">
+				<g transform="translate(960,262)">
 					<rect x={-300} y={-58} width={600} height={116} rx={16} fill="#3a2a1e" stroke={O} strokeWidth={5} />
 					<text x={34} y={18} textAnchor="middle" fontSize={54} fontFamily={FONT} fontWeight={900} fill="#f6e7c1" letterSpacing={2}>
 						БЕЛАЯ ЛАДЬЯ
@@ -84,10 +84,10 @@ export const Club: React.FC<{f: number; night?: boolean; hours?: number; sign?: 
 			) : null}
 			{[0, 1, 2].map((i) => (
 				<g key={i}>
-					<rect x={1330 + i * 120 - 560} y={330 + (i % 2) * 26} width={92} height={120} rx={4} fill="#fffaf0" stroke="#b08a3e" strokeWidth={7} />
-					<circle cx={1376 + i * 120 - 560} cy={420 + (i % 2) * 26} r={12} fill="#d9372b" />
-					<rect x={1346 + i * 120 - 560} y={350 + (i % 2) * 26} width={60} height={8} fill="#c9bfa6" />
-					<rect x={1346 + i * 120 - 560} y={368 + (i % 2) * 26} width={44} height={8} fill="#c9bfa6" />
+					<rect x={1330 + i * 120 - 1000} y={350 + (i % 2) * 26} width={92} height={120} rx={4} fill="#fffaf0" stroke="#b08a3e" strokeWidth={7} />
+					<circle cx={1376 + i * 120 - 1000} cy={440 + (i % 2) * 26} r={12} fill="#d9372b" />
+					<rect x={1346 + i * 120 - 1000} y={370 + (i % 2) * 26} width={60} height={8} fill="#c9bfa6" />
+					<rect x={1346 + i * 120 - 1000} y={388 + (i % 2) * 26} width={44} height={8} fill="#c9bfa6" />
 				</g>
 			))}
 			<g transform="translate(1560,210)">
@@ -370,15 +370,15 @@ export const Can: React.FC<{x?: number; y?: number; c?: string}> = ({x = 0, y = 
 	</g>
 );
 /* heading of a fact card: name and year on one dark plate */
-export const FactHead: React.FC<{title: string; year: string; k: number; y?: number}> = ({title, year, k, y = 150}) => {
-	const w = (title.length + year.length + 2) * 62 * 0.66 + 110;
+export const FactHead: React.FC<{title: string; year: string; k: number; y?: number}> = ({title, year, k, y = 170}) => {
+	const w = (title.length + year.length + 2) * 84 * 0.66 + 120;
 	return (
 		<g transform={`translate(960,${y - (1 - k) * 40})`} opacity={k}>
-			<rect x={-w / 2} y={-62} width={w} height={124} rx={24} fill={NAVY} stroke={GOLD} strokeWidth={5} />
-			<text x={-w / 2 + 44} y={22} fontSize={62} fontFamily={FONT} fontWeight={900} fill="#fff">
+			<rect x={-w / 2} y={-76} width={w} height={152} rx={28} fill={NAVY} stroke={GOLD} strokeWidth={6} />
+			<text x={-w / 2 + 50} y={30} fontSize={84} fontFamily={FONT} fontWeight={900} fill="#fff">
 				{title}
 			</text>
-			<text x={w / 2 - 44} y={22} textAnchor="end" fontSize={62} fontFamily={FONT} fontWeight={900} fill={GOLD}>
+			<text x={w / 2 - 50} y={30} textAnchor="end" fontSize={84} fontFamily={FONT} fontWeight={900} fill={GOLD}>
 				{year}
 			</text>
 		</g>
