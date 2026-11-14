@@ -1,17 +1,16 @@
-// заглушка: настройки ролика заполняются вместе со сценарием
 export type CounterKeyDef = {line: string; off?: number; v: number; roll?: number};
 
 export const STORY: {
 	title: string;
-	hero: string; // cast id of the main character
-	counter?: {label: string; color?: string; keys: CounterKeyDef[]}; // badge over the hero
+	hero: string;
+	counter?: {label: string; color?: string; keys: CounterKeyDef[]};
 	heroAge?: (counter: number) => number;
 	heroGrow?: number;
 	bed: string;
 	musicVolume?: number;
 	endCaption?: string[];
 } = {
-	title: 'chessbox (заглушка)',
-	hero: 'hero',
+	title: 'Что если шахматист и боксёр поменяются местами на 30 дней?',
+	hero: 'lev',
 	bed: 'sfx/bed.wav',
 };

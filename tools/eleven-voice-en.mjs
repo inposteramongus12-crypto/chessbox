@@ -1,7 +1,7 @@
 // ENGLISH track: voices src/story/lines.en.json with ElevenLabs (flash v2.5, 0.5 credit/char) -> public/vo_en/<id>.mp3.
 //   node tools/eleven-voice.mjs --plan              count characters still to voice, show credits on all keys, no voicing
 //   node tools/eleven-voice.mjs [--only 077,078]     voice (skips lines already voiced with the same text)
-//   node tools/eleven-voice.mjs ... --keys 7 --skip 2,5   use keys 1..7 (default), skip key numbers; --key1-only = --keys 1
+//   node tools/eleven-voice.mjs ... --keys 8 --skip 2,5   use keys 1..8 (default), skip key numbers; --key1-only = --keys 1
 //   node tools/eleven-voice.mjs ... --force          re-voice even if already done
 // Voices come from src/story/voices.json: {"N": {"name": "George", "eleven": "<voice_id>"}, ...}.
 // Keys only from the environment (ELEVENLABS_API_KEY, _2 .. _7); never printed or stored. See tools/eleven-keys.mjs.

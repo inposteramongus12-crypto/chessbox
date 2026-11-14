@@ -1,5 +1,5 @@
-// Shared key pool for eleven-voice.mjs / eleven-voice-en.mjs: keys ELEVENLABS_API_KEY, _2 .. _7 (env only, never printed or stored).
-//   --keys N     use keys 1..N (default 7; --key1-only = --keys 1)
+// Shared key pool for eleven-voice.mjs / eleven-voice-en.mjs: keys ELEVENLABS_API_KEY, _2 .. _8 (env only, never printed or stored).
+//   --keys N     use keys 1..N (default 8; --key1-only = --keys 1)
 //   --skip 2,5   do not use these key numbers
 // Credits left per key = min(API counter, local ledger). The ledger (public/vo/.eleven-ledger.json) stores key NUMBERS only.
 // A line goes whole to ONE key that has enough credits; keys with the biggest remainder go first; empty keys are skipped.
@@ -10,14 +10,14 @@ export const arg = (args, name) => (args.includes(name) ? args[args.indexOf(name
 
 export const createPool = (args, root) => {
 	const key1Only = args.includes('--key1-only');
-	const maxKeys = key1Only ? 1 : Number(arg(args, '--keys') ?? 7);
+	const maxKeys = key1Only ? 1 : Number(arg(args, '--keys') ?? 8);
 	const skip = (arg(args, '--skip') ?? '').split(',').filter(Boolean).map(Number);
 	const keys = [];
-	for (let n = 1; n <= Math.min(maxKeys, 7); n++) {
+	for (let n = 1; n <= Math.min(maxKeys, 8); n++) {
 		const k = process.env[n === 1 ? 'ELEVENLABS_API_KEY' : `ELEVENLABS_API_KEY_${n}`];
 		if (k && !skip.includes(n)) keys.push({n, k, sent: 0, start: null});
 	}
-	if (!keys.length) throw new Error('no ElevenLabs keys selected (ELEVENLABS_API_KEY .. _7 missing, or all skipped)');
+	if (!keys.length) throw new Error('no ElevenLabs keys selected (ELEVENLABS_API_KEY .. _8 missing, or all skipped)');
 	const ledgerFile = path.join(root, 'public/vo/.eleven-ledger.json');
 	fs.mkdirSync(path.dirname(ledgerFile), {recursive: true});
 	const ledger = fs.existsSync(ledgerFile) ? JSON.parse(fs.readFileSync(ledgerFile, 'utf8')) : {};

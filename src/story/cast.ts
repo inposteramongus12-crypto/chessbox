@@ -1,28 +1,25 @@
 import type {Base} from '../kit/actions';
 
-/* Characters of this video. Key = id used in <Actor who="..."/>; `sp` = speaker code in
-   lines.json (default: the id in upper case). Keep the hero yellow: the audience learns
-   the colour in the first seconds and finds the hero in any crowd.
-   Looks: color (hoodie), outfit hoodie|suit|gown|coat|apron|tee, hair none|spiky|bun|cap|
-   ponytail|grey|bob|short, hairColor, acc [headphones|mustache|glasses], shoe. */
+/* Characters of «30 дней обмена». Key = id used in <Actor who="..."/>; `sp` = speaker code in lines.json.
+   One body colour per character, no two the same. Gloves and helmets are added per scene (props on Actor). */
 export type CastMember = Base & {sp?: string};
+export const GL_Z = '#ffd34a'; // перчатки и шлем Захара
+export const GL_L = '#8fd3ff'; // перчатки и шлем Льва
 
 export const CAST: Record<string, CastMember> = {
-	hero: {color: '#f2b21c', hair: 'short', rim: '#fff0cc', rimW: 2.4},
-	trainer: {color: '#3a4256', outfit: 'tee', hair: 'cap', hairColor: '#c9342a', acc: ['mustache'], rim: '#e6ecff', rimW: 2.4, shoe: '#f2f2f2'},
-	tema: {color: '#d94a3a', hair: 'cap', hairColor: '#2f6fd8', rim: '#ffe0c8', rimW: 2.4, shoe: '#f2f2f2'},
-	vovan: {color: '#2f8f5a', outfit: 'tee', hair: 'none', rim: '#e8fff2', rimW: 2.4, shoe: '#111'},
-	kid: {color: '#4aa8d8', hair: 'spiky', hairColor: '#5a3a22', rim: '#e6f6ff', rimW: 2.4, shoe: '#f2f2f2'},
-	tmom: {color: '#3aa3a3', outfit: 'coat', hair: 'bun', hairColor: '#4a3426', rim: '#e6fffb', rimW: 2.4, shoe: '#f2f2f2'},
-	bro: {color: '#2f6fd8', hair: 'short', hairColor: '#5a3a22', rim: '#e6f0ff', rimW: 2.4, shoe: '#f2f2f2'},
-	sis: {color: '#e86aa0', hair: 'ponytail', hairColor: '#5a3a22', rim: '#ffe6f0', rimW: 2.4, shoe: '#f2f2f2'},
-	ygpa: {color: '#6b7f8e', outfit: 'tee', hair: 'short', hairColor: '#5a4636', rim: '#eef4ff', rimW: 2.4, shoe: '#2b2f3a'},
-	friend: {color: '#d94a3a', hair: 'cap', hairColor: '#2f6fd8', rim: '#ffe0c8', rimW: 2.4, shoe: '#f2f2f2'},
-	mom: {color: '#7a5cc4', outfit: 'gown', hair: 'bob', rim: '#ffe6c8', rimW: 2.4, shoe: '#2c2540'},
-	girl: {color: '#8b5cf6', hair: 'ponytail', hairColor: '#ffd34a', acc: ['headphones'], rim: '#efe2ff', rimW: 2.4, shoe: '#efe2ff'},
-	teacher: {color: '#8e3a4f', outfit: 'suit', hair: 'bun', acc: ['glasses'], rim: '#ffe6d6', rimW: 2.4, shoe: '#2b1d24'},
-	guard: {color: '#3a4256', outfit: 'suit', hair: 'cap', hairColor: '#28304a', acc: ['mustache'], rim: '#e6ecff', rimW: 2.4, shoe: '#111'},
-	doctor: {color: '#eef3f2', outfit: 'coat', hair: 'bob', rim: '#d8fff2', rimW: 2.4, shoe: '#2c3a40'},
-	seller: {color: '#3aa37a', outfit: 'apron', hair: 'bun', rim: '#e8fff2', rimW: 2.4, shoe: '#1d2b24'},
-	grandpa: {color: '#6b7f8e', outfit: 'tee', hair: 'grey', acc: ['glasses'], rim: '#eef4ff', rimW: 2.4, shoe: '#2b2f3a'},
+	// Захар Рудин, «Молот»: красный, короткая тёмная стрижка
+	zakhar: {sp: 'ZAKHAR', color: '#e0452e', outfit: 'tee', hair: 'short', hairColor: '#2a1c14', rim: '#ffe3d6', rimW: 2.4, shoe: '#f2f2f2', bulk: 1.15},
+	// Лев Арский, гроссмейстер: синий, очки, каштановые волосы
+	lev: {sp: 'LEV', color: '#2f6fd8', outfit: 'suit', hair: 'short', hairColor: '#6b4a2a', acc: ['glasses'], rim: '#e6f0ff', rimW: 2.4, shoe: '#1b2440'},
+	// Ада Марковна: сиреневая кофта, седой пучок, очки
+	ada: {sp: 'ADA', color: '#9a5bc7', outfit: 'coat', hair: 'bun', hairColor: '#d6d6de', acc: ['glasses'], rim: '#f3e6ff', rimW: 2.4, shoe: '#3a2550', scale: 0.92},
+	// Палыч: зелёная толстовка, кепка, усы
+	palych: {sp: 'PALYCH', color: '#3f9e58', outfit: 'hoodie', hair: 'cap', hairColor: '#f1ead8', acc: ['mustache'], rim: '#e6ffe9', rimW: 2.4, shoe: '#1a2a1e'},
+	// без голоса (облачка)
+	tim: {color: '#f08a3c', outfit: 'tee', hair: 'spiky', hairColor: '#5a3a22', rim: '#fff0e0', rimW: 2.4, shoe: '#f2f2f2', scale: 0.62},
+	ded: {color: '#6f8f9a', outfit: 'coat', hair: 'grey', rim: '#e8f6fa', rimW: 2.4, shoe: '#2a3a40', scale: 0.95},
+	junior: {color: '#35b8c2', outfit: 'tee', hair: 'spiky', hairColor: '#1d2a30', rim: '#e0fbff', rimW: 2.4, shoe: '#f2f2f2', scale: 0.9},
+	ref: {color: '#e9eef5', outfit: 'tee', hair: 'none', rim: '#ffffff', rimW: 2.4, shoe: '#111'},
+	foe: {color: '#8b5cf6', outfit: 'tee', hair: 'none', rim: '#efe6ff', rimW: 2.4, shoe: '#f2f2f2'},
+	seller: {color: '#d97fa6', outfit: 'apron', hair: 'bob', hairColor: '#7a3b2a', rim: '#ffe6f0', rimW: 2.4, shoe: '#402030'},
 };
