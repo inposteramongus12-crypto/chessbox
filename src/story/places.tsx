@@ -84,10 +84,10 @@ export const Club: React.FC<{f: number; night?: boolean; hours?: number; sign?: 
 			) : null}
 			{[0, 1, 2].map((i) => (
 				<g key={i}>
-					<rect x={1330 + i * 120 - 1000} y={350 + (i % 2) * 26} width={92} height={120} rx={4} fill="#fffaf0" stroke="#b08a3e" strokeWidth={7} />
-					<circle cx={1376 + i * 120 - 1000} cy={440 + (i % 2) * 26} r={12} fill="#d9372b" />
-					<rect x={1346 + i * 120 - 1000} y={370 + (i % 2) * 26} width={60} height={8} fill="#c9bfa6" />
-					<rect x={1346 + i * 120 - 1000} y={388 + (i % 2) * 26} width={44} height={8} fill="#c9bfa6" />
+					<rect x={1330 + i * 120 - 640} y={350 + (i % 2) * 26} width={92} height={120} rx={4} fill="#fffaf0" stroke="#b08a3e" strokeWidth={7} />
+					<circle cx={1376 + i * 120 - 640} cy={440 + (i % 2) * 26} r={12} fill="#d9372b" />
+					<rect x={1346 + i * 120 - 640} y={370 + (i % 2) * 26} width={60} height={8} fill="#c9bfa6" />
+					<rect x={1346 + i * 120 - 640} y={388 + (i % 2) * 26} width={44} height={8} fill="#c9bfa6" />
 				</g>
 			))}
 			<g transform="translate(1560,210)">

@@ -367,7 +367,7 @@ const SwapGym: React.FC<{who?: 'lev'}> = () => {
 	const speak = t('015') > -6;
 	const cam = useLineCam({'013': C(960, 580, 1.14, 900, 580, 1.3), '015': C(830, 600, 1.4, 820, 590, 1.5)}, []);
 	const fix = env(t('015'), 14, 40, 8, 8);
-	const p = speak ? reach(reach(idle(gf, 1), 'F', [62, -104], 1), 'B', [40, -100 - fix * 20], fix) : {...idle(gf, 1), armF: [18, 30] as [number, number], armB: [-14, 28] as [number, number]};
+	const p = speak ? reach(reach(idle(gf, 1), 'F', [74, -84], 1), 'B', [40, -100 - fix * 20], fix) : {...idle(gf, 1), armF: [18, 30] as [number, number], armB: [-14, 28] as [number, number]};
 	return (
 		<Stage cam={cam} bg="#3b4a5e" light={{x: 50, y: 6, o: 0.36}}>
 			<Layer depth={1.5}>
