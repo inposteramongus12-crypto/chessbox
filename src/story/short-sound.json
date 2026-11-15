@@ -1,0 +1,242 @@
+{
+ "_comment": "Шортс: подложка по short-timeline.json (реплики шортса 001–010). Музыки нет. Вжухи на стыках планов и щелчки расставлены вручную.",
+ "ambience": [
+  {
+   "from": "001",
+   "to": "001",
+   "kind": "hall",
+   "gain": 0.05
+  },
+  {
+   "from": "002",
+   "to": "002",
+   "kind": "crowd",
+   "gain": 0.06
+  },
+  {
+   "from": "003",
+   "to": "003",
+   "kind": "room",
+   "gain": 0.04
+  },
+  {
+   "from": "004",
+   "to": "005",
+   "kind": "room",
+   "gain": 0.045
+  },
+  {
+   "from": "006",
+   "to": "007",
+   "kind": "room",
+   "gain": 0.05
+  },
+  {
+   "from": "008",
+   "to": "009",
+   "kind": "crowd",
+   "gain": 0.03
+  },
+  {
+   "from": "010",
+   "to": "010",
+   "kind": "room",
+   "gain": 0.04
+  }
+ ],
+ "sfx": [
+  {
+   "at": "002",
+   "off": -11,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "003",
+   "off": -11,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "004",
+   "off": -11,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "006",
+   "off": -11,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "008",
+   "off": -11,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "010",
+   "off": -11,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "001",
+   "off": 62,
+   "type": "click",
+   "amp": 0.2
+  },
+  {
+   "at": "001",
+   "off": 6,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "002",
+   "off": 46,
+   "type": "thud",
+   "amp": 0.5
+  },
+  {
+   "at": "002",
+   "off": 54,
+   "type": "clap",
+   "amp": 0.2
+  },
+  {
+   "at": "002",
+   "off": 72,
+   "type": "ding",
+   "amp": 0.1
+  },
+  {
+   "at": "003",
+   "off": 82,
+   "type": "click",
+   "amp": 0.22
+  },
+  {
+   "at": "003",
+   "off": 112,
+   "type": "click",
+   "amp": 0.22
+  },
+  {
+   "at": "003",
+   "off": 136,
+   "type": "click",
+   "amp": 0.22
+  },
+  {
+   "at": "003",
+   "off": 142,
+   "type": "stamp",
+   "amp": 0.4
+  },
+  {
+   "at": "004",
+   "off": 6,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "005",
+   "off": 0,
+   "type": "sent",
+   "amp": 0.1
+  },
+  {
+   "at": "005",
+   "off": 4,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "006",
+   "off": 0,
+   "type": "alarm",
+   "amp": 0.04,
+   "dur": 1.2
+  },
+  {
+   "at": "006",
+   "off": 16,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "007",
+   "off": 4,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "008",
+   "off": 0,
+   "type": "ding",
+   "amp": 0.12
+  },
+  {
+   "at": "008",
+   "off": 6,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "009",
+   "off": 10,
+   "type": "click",
+   "amp": 0.16
+  },
+  {
+   "at": "009",
+   "off": 40,
+   "type": "click",
+   "amp": 0.16
+  },
+  {
+   "at": "009",
+   "off": 70,
+   "type": "click",
+   "amp": 0.16
+  },
+  {
+   "at": "009",
+   "off": 100,
+   "type": "click",
+   "amp": 0.16
+  },
+  {
+   "at": "009",
+   "off": 130,
+   "type": "click",
+   "amp": 0.16
+  },
+  {
+   "at": "009",
+   "off": 6,
+   "type": "pop",
+   "amp": 0.1
+  },
+  {
+   "at": "010",
+   "off": 2,
+   "type": "ding",
+   "amp": 0.12
+  },
+  {
+   "at": "010",
+   "off": 68,
+   "type": "whoosh",
+   "amp": 0.12
+  },
+  {
+   "at": "010",
+   "off": 76,
+   "type": "pop",
+   "amp": 0.14
+  }
+ ]
+}
